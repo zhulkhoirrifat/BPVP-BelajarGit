@@ -88,3 +88,30 @@ console.log(`Apakah ${nilai1} !== ${nilai2}?`, nilai1 !== nilai2); // Strict ine
 console.log(`Apakah ${nilai1} > ${nilai2}?`, nilai1 > nilai2);     // Apakah nilai1 lebih besar dari nilai2: false
 console.log(`Apakah ${nilai1} >= ${nilai2}?`, nilai1 >= nilai2);   // Apakah nilai1 lebih besar atau sama dengan nilai2: false
 console.log(`Apakah ${nilai1} <= ${nilai2}?`, nilai1 <= nilai2);   // Apakah nilai1 lebih kecil atau sama dengan nilai2: true
+
+
+// =======================
+// Operasi Logika
+// =======================
+
+// Deklarasi nilai boolean
+const a = true;
+const b = false;
+
+// Operasi logika dasar
+console.log("a && b:", a && b); // AND → true jika keduanya true → false
+console.log("a || b:", a || b); // OR  → true jika salah satu true → true
+console.log("!a:", !a);         // NOT → kebalikan dari true → false
+console.log("!b:", !b);         // NOT → kebalikan dari false → true
+
+// Kombinasi logika kompleks
+console.log("(a && b) || !b:", (a && b) || !b); // (false) || true → true
+console.log("(a || b) && b:", (a || b) && b);   // (true) && false → false
+
+// Perbandingan logika campuran
+const x = 10;
+const y = 20;
+
+console.log("x < y && a:", x < y && a); // true && true → true
+console.log("x > y || b:", x > y || b); // false || false → false
+console.log("!(x === 10):", !(x === 10)); // !(true) → false
