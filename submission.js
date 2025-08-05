@@ -1,21 +1,21 @@
 const pi = 3.14159;
 const nilai1 = 5;
-const nilai2 = 5;
-const bentuk = "Lingkaran"; 
+const nilai2 = 7;
+const bentuk = "lingkaran"; 
 
 function hitungLuas(a, b, jenis) {
     let hasil;
 
-    switch (jenis) {
-        case "Persegi Panjang":
+    switch (jenis.toLowerCase()) {
+        case "persegi panjang":
             // panjang = a, lebar = b
             hasil = a * b;
             break;
-        case "Segitiga":
+        case "segitiga":
             // alas = a, tinggi = b
             hasil = 0.5 * a * b;
             break;
-        case "Lingkaran":
+        case "lingkaran":
             // jari-jari = a
             hasil = pi * a ** 2;
             break;
