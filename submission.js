@@ -1,3 +1,7 @@
+// =======================
+// Submission 1
+// =======================
+
 const pi = 3.14159;
 const nilai1 = 5;
 const nilai2 = 7;
@@ -28,3 +32,12 @@ function hitungLuas(a, b, jenis) {
 const hasilLuas = hitungLuas(nilai1, nilai2, bentuk);
 console.log(`Luas ${bentuk}:`, hasilLuas);
 
+// =======================
+// Submission 2
+// =======================
+
+const dataPeserta = ["Zhulkhoir Rifat Rianda Raja Faqih", "Laki-laki", "Programmer", "23"];
+
+word = `Halo, nama saya ${dataPeserta[0]}. Saya ${dataPeserta[1]} berusia ${3} tahun. Pekerjaan saya adalah ${dataPeserta[2]}`;
+
+console.log(word)
