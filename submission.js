@@ -38,6 +38,6 @@ console.log(`Luas ${bentuk}:`, hasilLuas);
 
 const dataPeserta = ["Zhulkhoir Rifat Rianda Raja Faqih", "Laki-laki", "Programmer", "23"];
 
-word = `Halo, nama saya ${dataPeserta[0]}. Saya ${dataPeserta[1]} berusia ${3} tahun. Pekerjaan saya adalah ${dataPeserta[2]}`;
+word = `Halo, nama saya ${dataPeserta[0]}. Saya ${dataPeserta[1]} berusia ${dataPeserta[3]} tahun. Pekerjaan saya adalah ${dataPeserta[2]}`;
 
 console.log(word)
