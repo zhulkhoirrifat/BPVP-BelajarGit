@@ -23,29 +23,30 @@ console.log(greet.replace("a", "z"));
 let newText = greet.replace("a", "z");
 
 
-let angka1 = 2;
-let angka2 = 3;
+// Deklarasi angka
+const angka1 = 2;
+const angka2 = 3;
 
-//penjumlahan
-hasil = angka1 + angka2;
-console.log(hasil)
+// Penjumlahan
+let hasilPenjumlahan = angka1 + angka2;
+console.log("Penjumlahan:", hasilPenjumlahan);
 
-//pengurangan
-hasil = angka1 + angka2;
-console.log(hasil)
+// Pengurangan
+let hasilPengurangan = angka1 - angka2;
+console.log("Pengurangan:", hasilPengurangan);
 
-//perkalian
-hasil = angka1 * angka2;
-console.log(hasil)
+// Perkalian
+let hasilPerkalian = angka1 * angka2;
+console.log("Perkalian:", hasilPerkalian);
 
-//pembagian
-hasil = angka1 / angka2;
-console.log(hasil)
+// Pembagian
+let hasilPembagian = angka1 / angka2;
+console.log("Pembagian:", hasilPembagian);
 
-//modulo
-hasil = angka1 % angka2;
-console.log(hasil)
+// Modulo
+let hasilModulo = angka1 % angka2;
+console.log("Modulo:", hasilModulo);
 
-//pangkat
-hasil = angka1 ** angka2;
-console.log(hasil)
+// Pangkat
+let hasilPangkat = angka1 ** angka2;
+console.log("Pangkat:", hasilPangkat);
