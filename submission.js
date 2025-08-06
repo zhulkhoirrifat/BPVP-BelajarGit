@@ -41,3 +41,15 @@ const dataPeserta = ["Zhulkhoir Rifat Rianda Raja Faqih", "Laki-laki", "Programm
 word = `Halo, nama saya ${dataPeserta[0]}. Saya ${dataPeserta[1]} berusia ${dataPeserta[3]} tahun. Pekerjaan saya adalah ${dataPeserta[2]}`;
 
 console.log(word)
+
+// =======================
+// Submission 3
+// =======================
+
+let namaPeserta = []
+
+// let peserta = ['Febri', 'Bagus', 'Tirta', 'Azra', 'Surya', 'Ragil', 'Norpa', 'Nanto', 'Ariq', 'Irpan', 'Deni', 'Rifat', 'Sulis', 'Sindi', 'Serly', 'Tita']
+
+namaPeserta.push('Febri', 'Bagus', 'Tirta', 'Azra', 'Surya', 'Ragil', 'Norpa', 'Nanto', 'Ariq', 'Irpan', 'Deni', 'Rifat', 'Sulis', 'Sindi', 'Serly', 'Tita')
+
+console.log(namaPeserta)
