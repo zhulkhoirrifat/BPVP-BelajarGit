@@ -58,7 +58,7 @@ console.log(namaPeserta)
 // Submission 4
 // =======================
 
-let nilai = 8;
+let nilai = 70;
 
 if (nilai <= 100 && nilai >= 80) {
     console.log(`Nilai ${nilai}: A`);
@@ -73,3 +73,55 @@ if (nilai <= 100 && nilai >= 80) {
 } else {
     console.log("Input salah")
 }
+
+// =======================
+// Submission 4
+// =======================
+
+const tanggal = 17;
+let bulan = 8;
+const tahun = 1945;
+
+switch (bulan) {
+    case 1:
+        bulan = "Januari";
+        break;
+    case 2:
+        bulan = "Februari";
+        break;
+    case 3:
+        bulan = "Maret";
+        break;
+    case 4:
+        bulan = "April";
+        break;
+    case 5:
+        bulan = "Mei";
+        break;
+    case 6:
+        bulan = "Juni";
+        break;
+    case 7:
+        bulan = "Juli";
+        break;
+    case 8:
+        bulan = "Agustus";
+        break;
+    case 9:
+        bulan = "September";
+        break;
+    case 10:
+        bulan = "Oktober";
+        break;
+    case 11:
+        bulan = "November";
+        break;
+    case 12:
+        bulan = "Desember";
+        break;
+    default:
+        console.log("Out of bounds");
+        break;
+}
+
+console.log(`${tanggal} ${bulan} ${tahun}`)
