@@ -127,7 +127,7 @@ switch (bulan) {
 console.log(`${tanggal} ${bulan} ${tahun}`)
 
 // =======================
-// Submission 4
+// Submission 5
 // =======================
 for (let i = 1; i <= 10; i++) {
     console.log("Nomor urut ke-" + i);
