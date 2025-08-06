@@ -87,4 +87,3 @@ console.log("--EDIT ELEMEN--");
 peserta[2] = 'Iya';
 console.log(peserta);
 
-//

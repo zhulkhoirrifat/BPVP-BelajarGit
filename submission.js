@@ -53,3 +53,23 @@ let namaPeserta = []
 namaPeserta.push('Febri', 'Bagus', 'Tirta', 'Azra', 'Surya', 'Ragil', 'Norpa', 'Nanto', 'Ariq', 'Irpan', 'Deni', 'Rifat', 'Sulis', 'Sindi', 'Serly', 'Tita')
 
 console.log(namaPeserta)
+
+// =======================
+// Submission 4
+// =======================
+
+let nilai = 8;
+
+if (nilai <= 100 && nilai >= 80) {
+    console.log(`Nilai ${nilai}: A`);
+} else if (nilai < 80 && nilai >=70) {
+    console.log(`Nilai ${nilai}: B`);
+} else if (nilai < 70 && nilai >= 60) {
+    console.log(`Nilai ${nilai}: C`);
+} else if (nilai < 60 && nilai >= 50) {
+    console.log(`Nilai ${nilai}: D`);
+} else if (nilai < 50 && nilai >= 0) {
+    console.log(`Nilai ${nilai}: E`);
+} else {
+    console.log("Input salah")
+}
