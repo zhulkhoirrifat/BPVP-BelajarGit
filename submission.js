@@ -125,3 +125,28 @@ switch (bulan) {
 }
 
 console.log(`${tanggal} ${bulan} ${tahun}`)
+
+// =======================
+// Submission 4
+// =======================
+for (let i = 1; i <= 10; i++) {
+    console.log("Nomor urut ke-" + i);
+}
+
+console.log("\n")
+
+for (let i = 10; i >= 1; i--) {
+    console.log("Hitung mundur:", i);
+}
+
+console.log("\n")
+
+for (let i = 2; i <= 20; i+=2) {
+    console.log(i, "- I love coding"); 
+}
+
+console.log("\n")
+
+for (let i = 20; i >= 2; i-=2) {
+    console.log(i, "- I will become a developer"); 
+}  
