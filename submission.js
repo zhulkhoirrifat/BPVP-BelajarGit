@@ -202,5 +202,5 @@ for (let i = 1; i <= 20; i++) {
 console.log("\n");
 
 for (let i = 0; i < namaPeserta.length; i++) {
-    console.log(`${i+1}:`, namaPeserta[i])
+    console.log(`${i+1}:`, namaPeserta[i]);
 }
