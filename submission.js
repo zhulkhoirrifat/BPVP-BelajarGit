@@ -241,7 +241,7 @@ let filterFruits = fruits.filter(function(item){
     return item["ada bijinya"] == "tidak"
 })
 
-console.log(filterFruits)
+console.log(filterFruits.sort())
 
 // =======================
 // Submission 9
@@ -251,7 +251,7 @@ console.log(filterFruits)
    Tulis kode function di sini
 */
 
-let dataFilm = []
+let dataFilm = [];
 
 function tambahDataFilm(title, duration, genre, year) {
     let dataFilmObj = {
@@ -259,9 +259,9 @@ function tambahDataFilm(title, duration, genre, year) {
         durasi: duration,
         genre: genre,
         tahun: year,
-    }
+    };
 
-    return dataFilm.push(dataFilmObj)
+    dataFilm.push(dataFilmObj)
     // return dataFilm.push({nama: title, durasi: duration, genre: genre, tahun: year})
 }
 
