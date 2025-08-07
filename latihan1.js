@@ -115,3 +115,5 @@ const y = 20;
 console.log("x < y && a:", x < y && a); // true && true → true
 console.log("x > y || b:", x > y || b); // false || false → false
 console.log("!(x === 10):", !(x === 10)); // !(true) → false
+
+

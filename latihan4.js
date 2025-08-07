@@ -130,3 +130,16 @@ console.log(studentObject);
 // Menambahkan student baru ke array
 student.push(studentObject);
 console.log(student)
+
+
+let angka = [10, 25, 16, 7]
+
+console.log(angka)
+
+let jumlah = 0
+
+for (let i = 0; i < angka.length; i++) {
+    jumlah = jumlah + angka[i];
+}
+
+console.log(jumlah)

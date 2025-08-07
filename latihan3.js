@@ -86,3 +86,17 @@ while (i < 20) {
   i+=2;
 };
 console.log("Keluar dari loop");
+
+
+
+console.log("If Else")
+
+const bilangan = 10;
+
+if (bilangan % 2 == 0) {
+    console.log("Bilangan Genap!");
+} else if (bilangan % 2 == 1) {
+    console.log("Bilangan Ganjil");
+} else {
+    console.log("Tidak valid!");
+}

@@ -271,3 +271,74 @@ tambahDataFilm("spiderman", "2 jam", "action", "2004")
 tambahDataFilm("juon", "2 jam", "horror", "2004")
 console.log(dataFilm)
 
+
+
+// =======================
+// Submission 10
+// =======================
+
+let people =[
+    {name: "John", job: "Programmer", gender: "male", age: 30},
+    {name: "Sarah", job: "Model", gender: "female", age: 27},
+    {name: "Jack", job: "Engineer", gender: "male", age: 25},
+    {name: "Ellie", job: "Designer", gender: "female", age: 35},
+    {name: "Danny", job: "Footballer", gender: "male", age: 30},
+  ]
+
+const filteredPeople = people.filter(function(person){
+    return person.gender == "male" && person.age >29
+})
+
+console.log(filteredPeople)
+
+// =======================
+// Submission 11
+// =======================
+
+let number = 0
+
+for (let i = 0; i < people.length; i++) {
+    number = number + people[i].age;
+}
+
+average = number / people.length
+
+console.log("Rata-rata usia:", average)
+
+// =======================
+// Submission 12
+// =======================
+
+// let sorted = people.sort(function(a, b) {
+//     return a.age - b.age
+// })
+
+//versi arrow function
+let sortedArrow = people.sort((a, b) => (a.age - b.age))
+
+for (let i = 0; i < sortedArrow.length; i++) {
+    console.log(i+1, "-", sortedArrow[i].name);
+    
+}
+
+// =======================
+// Submission 13
+// =======================
+
+var phone = {
+    name: "Samsung Galaxy Note 20",
+    brand: "Samsung",
+    colors: ["Black"],
+    release: 2020
+  }
+  /*
+   buatlah function anda disini
+  */
+
+function addColors(color) {
+    phone.colors.push(color)
+}
+  addColors("Gold")
+  addColors("Silver")
+  addColors("Brown")
+  console.log(phone)
