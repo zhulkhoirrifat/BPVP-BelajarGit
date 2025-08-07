@@ -194,3 +194,13 @@ for (let i = 1; i <= 20; i++) {
         console.log("Tidak Valid");
     }
 }
+
+// =======================
+// Submission 7
+// =======================
+
+console.log("\n");
+
+for (let i = 0; i < namaPeserta.length; i++) {
+    console.log(`${i+1}:`, namaPeserta[i])
+}
