@@ -178,3 +178,19 @@ while (i >= 2) {
     console.log(i, "- I will become a developer"); 
     i -= 2;
 }
+
+// =======================
+// Submission 6
+// =======================
+
+console.log("\n")
+
+for (let i = 1; i <= 20; i++) {
+    if (i % 2 == 1) {
+        console.log(i, "- Angka Ganjil");
+    } else if (i % 2 == 0) {
+        console.log(i, "- Angka Genap");
+    } else {
+        console.log("Tidak Valid");
+    }
+}
