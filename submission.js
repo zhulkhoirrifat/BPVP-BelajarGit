@@ -204,3 +204,70 @@ console.log("\n");
 for (let i = 0; i < namaPeserta.length; i++) {
     console.log(`${i+1}:`, namaPeserta[i]);
 }
+
+// =======================
+// Submission 8
+// =======================
+console.log("\n")
+
+const fruits = [
+    {
+      nama: "Nanas",
+      warna: "Kuning",
+      "ada bijinya": "tidak",
+      harga: 9000
+    },
+    {
+      nama: "Jeruk",
+      warna: "Oranye",
+      "ada bijinya": "ada",
+      harga: 8000
+    },
+    {
+      nama: "Semangka",
+      warna: ["Hijau", "Merah"],
+      "ada bijinya": "ada",
+      harga: 10000
+    },
+    {
+      nama: "Pisang",
+      warna: "Kuning",
+      "ada bijinya": "tidak",
+      harga: 5000
+    }
+  ];
+  
+let filterFruits = fruits.filter(function(item){
+    return item["ada bijinya"] == "tidak"
+})
+
+console.log(filterFruits)
+
+// =======================
+// Submission 9
+// =======================
+
+/*
+   Tulis kode function di sini
+*/
+
+let dataFilm = []
+
+function tambahDataFilm(title, duration, genre, year) {
+    let dataFilmObj = {
+        nama: title,
+        durasi: duration,
+        genre: genre,
+        tahun: year,
+    }
+
+    return dataFilm.push(dataFilmObj)
+    // return dataFilm.push({nama: title, durasi: duration, genre: genre, tahun: year})
+}
+
+tambahDataFilm("LOTR", "2 jam", "action", "1999")
+tambahDataFilm("avenger", "2 jam", "action", "2019")
+tambahDataFilm("spiderman", "2 jam", "action", "2004")
+tambahDataFilm("juon", "2 jam", "horror", "2004")
+console.log(dataFilm)
+
