@@ -423,3 +423,69 @@ function recursiveSmartphone(phone, index=0) {
 }
 
 recursiveSmartphone(sortSmartphone)
+
+
+// =======================
+// Submission 18
+// =======================
+
+
+const PI = 3.1415926535897932384626433832795028841971693993751058806613001927876611195909216420198
+
+
+const areaCircle = (r) => {
+    return PI * r**2
+} 
+
+const circumferenceCircle = (r) => {
+    return 2 * PI * r
+}
+
+console.log(areaCircle(77))
+console.log(circumferenceCircle(77))
+
+// =======================
+// Submission 19
+// =======================
+
+/* 
+Tulis kode function di sini
+*/
+
+const introduce = (...args) => {
+    const [nama, umur, gender, pekerjaan] = args;
+    if (gender == "Perempuan") {
+        return `Bu ${nama} adalah seorang ${pekerjaan} yang berusia ${umur} tahun`;
+    }
+    else{
+        return `Pak ${nama} adalah seorang ${pekerjaan} yang berusia ${umur} tahun`;
+    }
+}
+
+//kode di bawah ini jangan dirubah atau dihapus
+const perkenalanJohn = introduce("john", "30", "Laki-Laki", "penulis");
+console.log(perkenalanJohn) // Menampilkan "pak john adalah seorang penulis yang berusia 30 tahun"
+
+//kode di bawah ini jangan dirubah atau dihapus
+const perkenalanSarah = introduce("sarah", "28", "Perempuan", "guru");
+console.log(perkenalanSarah) // Menampilkan "bu sarah adalah seorang penulis yang berusia 30 tahun"
+
+
+// =======================
+// Submission 20
+// =======================
+
+const newFunction = (firstName, lastName) =>{
+    return {
+        firstName,
+        lastName,
+        fullName(){
+          console.log(`${firstName} ${lastName}`)
+        }
+    }
+    };
+    
+// kode di bawah ini jangan diubah atau dihapus sama sekali
+console.log(newFunction("John", "Doe").firstName)
+console.log(newFunction("Richard", "Roe").lastName)
+newFunction("William", "Imoh").fullName()
