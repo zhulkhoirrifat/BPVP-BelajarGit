@@ -46,8 +46,9 @@ function tambah(a, b) {
 console.log(tambah(2, 5))
 
 // =======================
-// First-class Function
+// Currying Function
 // =======================
+let users = ["Fuad", "Hasan", "Ismi", "Budi", "Azhar"];
 
 function tambahCurrying(a) {
     return function(b) {
@@ -57,27 +58,25 @@ function tambahCurrying(a) {
 
 console.log(tambahCurrying(2)(5))
 
-// Tanpa currying function
-function getGreeting(){
-    let x = 0;
-    for (let i = 0; i < 10000000000; i++) {
-        x += i;
-    };
-    return "Selamat pagi";
-}
+// // Tanpa currying function
+// function getGreeting(){
+//     let x = 0;
+//     for (let i = 0; i < 10000000000; i++) {
+//         x += i;
+//     };
+//     return "Selamat pagi";
+// }
 
-function say(callback, name) {
-    let greeting = callback();
-    console.log(greeting, name);
-}
+// function say(callback, name) {
+//     let greeting = callback();
+//     console.log(greeting, name);
+// }
 
-
-users.map(function(user){
-        return say(getGreeting, user)
-    })
+// users.map(function(user){
+//     return say(getGreeting, user)
+// })
     
-let users = ["Fuad", "Hasan", "Ismi", "Budi", "Azhar"];
-
+// Pakai Currying function
 function getGreeting() {
     let x = 0;
     for (let i = 0; i < 1000000000; i++) {
@@ -98,3 +97,18 @@ let sayGreeting = say(getGreeting);
 users.map(function(user){
     sayGreeting(user)
 })
+
+
+
+// =======================
+// Enhanced Object Literals (ES6)
+// =======================
+
+let nama = "John"
+
+let orang = {
+    nama, //: nama, //hapus key nama karena sama
+    umur: 20
+}
+
+console.log(orang)
