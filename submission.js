@@ -309,17 +309,16 @@ console.log("Rata-rata usia:", average)
 // Submission 12
 // =======================
 
-// let sorted = people.sort(function(a, b) {
-//     return a.age - b.age
-// })
+let sorted = people.sort(function(a, b) {
+    return a.age - b.age
+})
 
 //versi arrow function
 let sortedArrow = people.sort((a, b) => (a.age - b.age))
 
-for (let i = 0; i < sortedArrow.length; i++) {
-    console.log(i+1, "-", sortedArrow[i].name);
-    
-}
+sortedArrow.forEach((people, index) => {
+    console.log(index+1, "-", people.name)
+});
 
 // =======================
 // Submission 13
@@ -338,7 +337,10 @@ var phone = {
 function addColors(color) {
     phone.colors.push(color)
 }
-  addColors("Gold")
-  addColors("Silver")
-  addColors("Brown")
-  console.log(phone)
+
+addColors("Gold")
+addColors("Silver")
+addColors("Brown")
+console.log(phone)
+
+w
