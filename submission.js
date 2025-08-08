@@ -343,4 +343,83 @@ addColors("Silver")
 addColors("Brown")
 console.log(phone)
 
-w
+
+// =======================
+// Submission 14
+// =======================
+
+function hitungBangunDatar(a, b) {
+    if (arguments.length == 1) {
+        function luasPersegi (a) {return a**2};
+        console.log("Luas Persegi:", luasPersegi(a));
+    } else{
+        function luasPersegiPanjang (a, b) {return a * b}
+        console.log("Luas Persegi Panjang:", luasPersegiPanjang(a, b));
+    }
+}
+
+hitungBangunDatar(8)
+hitungBangunDatar(12, 7)
+
+// =======================
+// Submission 15
+// =======================
+
+function hitungBangunRuang(a, b, c) {
+    if (arguments.length == 1){
+        function volumeKubik (a) {return a**3};
+        console.log("Volume Kubik:", volumeKubik(a));
+    } else{
+        function volumeBalok (a, b, c) {return a * b * c}
+        console.log("Volume Balok:", volumeBalok(a, b, c));
+    }
+}
+
+hitungBangunRuang(8)
+hitungBangunRuang(12, 7, 5)
+
+// =======================
+// Submission 16
+// =======================
+
+let sortPeople = people.sort((a, b) => (a.age - b.age));
+
+function sortPeopleFunction(person, index=0) {
+    // let sortPerson = person;
+    if (index < person.length){
+        newIndex = index+1
+        console.log(newIndex +". " + person[index].name)
+        sortPeopleFunction(person, newIndex);
+    }
+}
+sortPeopleFunction(sortPeople)
+
+// =======================
+// Submission 17
+// =======================
+
+var phones=[
+    {name: "Samsung Galaxy A52", brand: "Samsung", year: 2021, colors: ["black", "white"]},
+    {name: "Redmi Note 10 Pro", brand: "Xiaomi", year: 2021, colors: ["white", "blue"]},
+    {name: "Redmi Note 9 Pro", brand: "Xiaomi", year: 2020, colors: ["white", "blue", "black"]},
+    {name: "Iphone 12", brand: "Apple", year: 2020, colors: ["silver", "gold"]},
+    {name: "Iphone 11", brand: "Apple", year: 2019, colors: ["gold", "black", "silver"]},
+  ]
+
+let filteredPhones = phones.filter(phone => phone.colors.includes('black'))
+
+let sortSmartphone = filteredPhones.sort((a, b) => (a.year - b.year))
+
+console.log(sortSmartphone)
+
+function recursiveSmartphone(phone, index=0) {
+    if (index < phone.length) {
+        i = index+1
+        const phoneName = phone[index].name
+        const phoneColors = phone[index].colors.join(", ");
+        console.log(`${i}. ${phoneName}, colors available: ${phoneColors}`);
+        recursiveSmartphone(phone, i)
+    }
+}
+
+recursiveSmartphone(sortSmartphone)
