@@ -112,3 +112,6 @@ let orang = {
 }
 
 console.log(orang)
+
+
+
