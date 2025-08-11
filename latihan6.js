@@ -212,3 +212,4 @@ async function hello(){
 
 // Menjalankan fungsi 'hello' yang sudah didefinisikan di atas
 hello();
+
