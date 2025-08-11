@@ -489,3 +489,135 @@ const newFunction = (firstName, lastName) =>{
 console.log(newFunction("John", "Doe").firstName)
 console.log(newFunction("Richard", "Roe").lastName)
 newFunction("William", "Imoh").fullName()
+
+// =======================
+// Submission 21
+// =======================
+
+let phoneDestructuring = {
+    name: "Galaxy Note 20",
+    brand: "Samsung",
+    year: 2020,
+    colors: ["Mystic Bronze", "Mystic White", "Mystic Black"]
+ }
+ // kode diatas ini jangan di rubah atau di hapus sama sekali
+ 
+ /* Tulis kode jawabannya di sini */
+ let {name: phoneName, brand: phoneBrand, year: year, colors: [colorBronze, colorWhite, colorBlack]} = phoneDestructuring
+
+ // kode di bawah ini jangan dirubah atau dihapus
+ console.log(phoneBrand, phoneName, year, colorBlack, colorBronze)
+
+ // =======================
+// Submission 22
+// =======================
+
+let warna = ["biru", "merah", "kuning" , "hijau"]
+
+
+let dataBukuTambahan= {
+  penulis: "john doe",
+  tahunTerbit: 2020 
+}
+
+
+let buku = {
+  nama: "pemograman dasar",
+  jumlahHalaman: 172,
+  warnaSampul:["hitam"]
+}
+// kode diatas ini jangan di rubah atau di hapus sama sekali
+
+/* Tulis kode jawabannya di sini */
+
+let [...warnaSampul] = warna
+
+let {nama: namaBuku, jumlahHalaman: jumlahHalaman, warnaSampul: [warnaSampulBuku]} = buku
+
+warnaSampulBuku = [warnaSampulBuku, ...warnaSampul]
+
+console.log(warnaSampulBuku)
+
+
+// =======================
+// Submission 23
+// =======================
+
+/*
+ tulislah function anda disini
+*/
+const addProducts = (dataSamsung, newProducts) => {
+    dataSamsung.products = [...dataSamsung.products, ...newProducts]
+    return dataSamsung
+}
+
+let samsung ={
+    name: "Samsung",
+    products :[
+     {name: "Samsung Galaxy Note 10", colors: ["black", "gold", "silver"]},
+     {name: "Samsung Galaxy Note 10s", colors: ["blue", "silver"]},
+     {name: "Samsung Galaxy Note 20s", colors: ["white", "black"]}
+    ]
+    }
+   
+   let newProducts = [
+    {name: "Samsung Galaxy A52", colors: ["white", "black"]},
+    {name: "Samsung Galaxy M52", colors: ["blue", "grey", "white"]}
+   ]
+   
+   samsung = addProducts(samsung, newProducts)
+   
+   console.log(samsung)
+
+
+   
+// =======================
+// Submission 24
+// =======================
+
+const dataDiri = (data) => {
+    const [nama, domisili, umur] = data;
+    dataObj = {nama, domisili, umur}
+    return dataObj
+}
+let data = ["Bondra", "Medan", 25]
+console.log(dataDiri(data))
+
+// =======================
+// Submission 25
+// =======================
+
+// TEST CASES
+const data1 = [
+    { name: "Ahmad", class: "adonis"},
+    { name: "Regi", class: "laravel"},
+    { name: "Bondra", class: "adonis"},
+    { name: "Iqbal", class: "vuejs" },
+    { name: "Putri", class: "laravel" }
+  ]
+  
+  const data2 = [
+    { name: "Yogi", class: "react"},
+    { name: "Fikri", class: "agile"},
+    { name: "Arief", class: "agile"}
+  ]
+
+  const graduate = (...data) => {
+    let allStudent = [].concat(...data);
+    let hasil = {}
+    allStudent.forEach(data => {
+        let kelas = data.class;
+        let nama = data.name;
+
+        if (!hasil[kelas]) {
+            hasil[kelas] = [];
+        }
+        hasil[kelas].push(nama)
+
+    });
+    return hasil
+  }
+  
+  
+  console.log(graduate(data1))
+  console.log(graduate(data2))
