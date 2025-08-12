@@ -621,3 +621,76 @@ const data1 = [
   
   console.log(graduate(data1))
   console.log(graduate(data2))
+
+// =======================
+// Submission 26
+// =======================
+
+// SUBMISSION 26 ADA DI FOLDER LAIN YAITU TUGAS ASYNCHRONUS JS
+
+// =======================
+// Submission 27
+// =======================
+
+class Animal {
+    // Code class di sini
+    constructor(name){
+        this.name = name
+        this._legs = 4
+        this.cold_blooded = false
+    }
+
+    get legs() {
+        return this._legs;
+    }
+
+    set legs(newLegs){
+        this._legs = newLegs
+    }
+}
+ 
+var sheep = new Animal("shaun");
+ 
+console.log(sheep.name) // "shaun"
+console.log(sheep.legs) // 4
+console.log(sheep.cold_blooded) // false
+sheep.legs = 3
+console.log(sheep.legs)
+
+
+// =======================
+// Submission 28
+// =======================
+
+// Code class Ape dan class Frog di sini
+class Ape extends Animal{
+    constructor(name){
+        super(name)
+        this.legs = 2
+    }
+    yell(){
+        console.log("Auooo")
+    }
+}
+
+class Frog extends Animal{
+    constructor(name){
+        super(name)
+    }
+    jump(){
+        console.log("hop hop")
+    }
+}
+
+var sungokong = new Ape("kera sakti")
+sungokong.yell() // "Auooo"
+sungokong.legs = 2
+console.log(sungokong.name)
+console.log(sungokong.legs)
+console.log(sungokong.cold_blooded)
+
+var kodok = new Frog("buduk")
+kodok.jump() // "hop hop"
+console.log(kodok.name)
+console.log(kodok.legs)
+console.log(kodok.cold_blooded)
