@@ -109,7 +109,7 @@ var basicAuth = (req, res, next) => {
     .toString()
     .split(":");
   var user = auth[0];
-  var pass = auth[1];g
+  var pass = auth[1]; g
 
   if (user == "admin" && pass == "admin") {
     next();

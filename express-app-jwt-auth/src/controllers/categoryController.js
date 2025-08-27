@@ -1,14 +1,17 @@
 const { response } = require("express")
 const { prisma } = require("../config/utils")
+const { getCurrentUser } = require("../config/libs")
 
 const createCategory = async (request, response) => {
     let { name, description } = request.body
+    const user = await getCurrentUser(request.user)
 
     try{
         let categories = await prisma.Category.create({
             data: {
                 name,
-                description
+                description,
+                userId: user.id
             }
         })
         response.json({

@@ -1,14 +1,21 @@
 const { response } = require("express")
 const { prisma } = require("../config/utils")
+const { getCurrentUser } = require("../config/libs")
 
 const createCategory = async (request, response) => {
-    let { name, description } = request.body
+    // #swagger.tags = ['Category']
+    /* #swagger.security = [{
+            "bearerAuth": []
+    }] */
+    let { title, description } = request.body
+    const user = await getCurrentUser(request.user)
 
     try{
-        let categories = await prisma.Category.create({
+        let categories = await prisma.category.create({
             data: {
-                name,
-                description
+                title,
+                description,
+                userId: user.id
             }
         })
         response.json({
@@ -27,6 +34,7 @@ const createCategory = async (request, response) => {
 }
 
 const readCategory = async (request, response) => {
+    // #swagger.tags = ['Category']
     try {
         let allCategory = await prisma.Category.findMany();
         response.json({
@@ -45,6 +53,7 @@ const readCategory = async (request, response) => {
 }
 
 const readCategoryById = async (request, response) => {
+    // #swagger.tags = ['Category']
     try {
         let { id } = request.params;
         let uniqCategory = await prisma.Category.findUnique({
@@ -73,14 +82,18 @@ const readCategoryById = async (request, response) => {
 }
 
 const updateCategory = async (request, response) => {
+    // #swagger.tags = ['Category']
+    /* #swagger.security = [{
+            "bearerAuth": []
+    }] */
     try {
         let { id } = request.params;
-        let { name, description } = request.body;
+        let { title, description } = request.body;
 
         let updateCategory = await prisma.Category.update({
             where: { id: Number(id) },
             data: { 
-                name,
+                title,
                 description
             }
         });
@@ -100,11 +113,15 @@ const updateCategory = async (request, response) => {
 }
 
 const deleteCategory = async (request, response) => {
+    // #swagger.tags = ['Category']
+    /* #swagger.security = [{
+            "bearerAuth": []
+    }] */
     try {
         let { id } = request.params;
 
         let deleteCategory = await prisma.Category.delete({
-            where: { id: Number(id) }
+            where: { id }
         });
         response.json({
             data: deleteCategory,
