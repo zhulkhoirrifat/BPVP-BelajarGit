@@ -1,0 +1,54 @@
+div{
+    border: 1px solid black;
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+    /* justify-content: center; */
+
+
+}
+
+.container{
+    display: flex;
+    background-color: aqua;
+    border-color: blue;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    gap: 200px;
+}
+
+.home{
+    border-color: red;
+}
+
+
+.container div:hover{
+    background-color: blueviolet;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 10px;
+}
+.container-grid div{
+    border: 1px solid maroon;
+    min-height: 100px;
+    width: 100%;
+}
+
+.container-grid div:nth-child(even) {
+    background-color: #DDDDDD;
+}
+
+.container-grid div:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+
+/* .container div{
+    padding: 20px;
+    margin: 10px;    background-color: aqua; 
+} */
