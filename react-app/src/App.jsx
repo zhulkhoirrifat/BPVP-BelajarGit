@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import './style.css'
 import Welcome from './components/Welcome'
+import Counter from './components/Counter'
 
 function App() {
   let people = [
@@ -18,6 +19,12 @@ function App() {
           <Welcome key={ person.id } name={ person.name } job={person.job } color={ person.color }/>
         ))}
       </div>
+      <div>
+          <Counter />
+          <Counter start={100} />
+          <Counter start={-30} />
+        </div>
+
     </>
   )
 }
