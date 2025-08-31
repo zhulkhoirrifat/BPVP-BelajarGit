@@ -5,6 +5,8 @@ import axios from "axios";
 const CrudAxios = () => {
   const [data, setData] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [input, setInput] = useState({ title: "", year: "", categoryId: "" });
+  // console.log(categories)
   
 
   const fetchDataMovie = () => {
@@ -23,16 +25,38 @@ const CrudAxios = () => {
     fetchDataCategory()
     fetchDataMovie()    
   }, []);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    try {
+      await axios.post(`${baseUrl}/api/movie`, {
+        title: input.title, 
+        year: Number(input.year),
+        categoryId: Number(input.categoryId)
+      });
+      fetchDataMovie();
+      setInput({ title: "", year: "", categoryId: "" });
+    } catch (err) {
+      alert(err)
+    }
+  }
+
+  const handleChange = (event) => {
+    let { name, value } = event.target
+    setInput({ ...input, [name]: value})
+  }
   return (
     <>
       <h1 className="text-header">CRUD Axios</h1>
       {/* <Home></Home> */}
-      <form action="/action_page.php">
+      <form onSubmit={handleSubmit}>
         <label htmlFor="title">Title</label>
         <input
           type="text"
           id="title"
-          name="movietitle"
+          name="title"
+          onChange={handleChange}
+          value={input.title}
           placeholder="Title.. "
         />
 
@@ -40,17 +64,19 @@ const CrudAxios = () => {
         <input
           type="number"
           id="year"
-          name="movieyear"
+          name="year"
+          onChange={handleChange}
+          value={input.year}
           placeholder="Release date.."
           min={1888}
           max={2025}
         />
 
         <label htmlFor="category">Category</label>
-        <select id="category" name="moviecategory">
+        <select id="category" name="categoryId" onChange={handleChange}>
             { categories.map((item, index) => {
                 return (
-                    <option key={ item.id } value={ item.id }>{ item.name }</option>
+                    <option key={ index } value={ item.id }>{ item.name }</option>
                 )
             })}
         </select>
